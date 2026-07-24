@@ -26,7 +26,11 @@ Production Telegram bot with **Smart AI + n8n automation** for UpliftJEE ed-tech
 - Use `ai_helper_example.py` as reference and add your credentials locally
 
 ## Screenshots
-*(Add your screenshots here after uploading)*
+## Screenshots
+
+![Chat Example](screenshots/chat%20ss.png)
+
+![n8n Workflow](screenshots/n8n%20workflow.png)
 
 ---
 
