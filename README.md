@@ -28,10 +28,8 @@ Production Telegram bot with **Smart AI + n8n automation** for UpliftJEE ed-tech
 ## Screenshots
 ## Screenshots
 
-![Chat Example](screenshots/chat%20ss.png)
-
-![n8n Workflow](screenshots/n8n%20workflow.png)
-
+![Chat Example](upliftjee%20telegram/screenshots/chat%20ss.png)
+![n8n Workflow](upliftjee%20telegram/screenshots/n8n%20workflow.png)
 ---
 
 **Built by Sant Kumar Sahu (Vyom)**
