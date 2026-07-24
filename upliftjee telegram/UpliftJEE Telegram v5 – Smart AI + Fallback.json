@@ -1,0 +1,1091 @@
+{
+  "name": "UpliftJEE Telegram v5 – Smart AI + Fallback",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "f96e9772-ef03-4c6e-a39b-f47f7d1b2f67",
+      "name": "Telegram Trigger3",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        8896,
+        8320
+      ],
+      "webhookId": "e142cf4e-213e-4af8-86aa-992d38ad4d3c",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// ═══════════════════════════════════════════════════════════\n// NODE 01 — EXTRACT ALL DATA FROM INCOMING MESSAGE\n// ═══════════════════════════════════════════════════════════\nconst msg  = $json.message || {};\nconst from = msg.from  || {};\nconst chat = msg.chat  || {};\nconst text = (msg.text || '').trim();\nconst lower = text.toLowerCase();\n\n// Identity\nconst userId    = String(from.id   || '');\nconst chatId    = String(chat.id   || '');\nconst firstName = (from.first_name || '').trim();\nconst lastName  = (from.last_name  || '').trim();\nconst fullName  = [firstName, lastName].filter(Boolean).join(' ') || 'Unknown';\nconst username  = from.username ? '@' + from.username : 'No username';\n\n// Timestamp IST\nconst now = new Date();\nconst IST = new Intl.DateTimeFormat('en-IN', {\n  timeZone: 'Asia/Kolkata',\n  year: 'numeric', month: '2-digit', day: '2-digit',\n  hour: '2-digit', minute: '2-digit', second: '2-digit',\n  hour12: true\n});\nconst dateTime = IST.format(now);\n\n// ─── ROUTING FLAGS ────────────────────────────────────────\n\n// /start command\nconst isStart = lower === '/start';\n\n// ALL COURSES FALLBACK — student asking for full list\n// triggers when AI gave wrong link or student wants everything\nconst isAllCourses = !isStart && [\n  'all courses', 'all course', 'sab courses', 'sab links',\n  'wrong link', 'nahi yeh wala', 'galat link', 'other course',\n  'show all', 'full list', 'sabhi courses', 'baaki courses',\n  'complete list', 'poori list'\n].some(k => lower.includes(k));\n\n// BOOKS / MATERIAL — kept as keyword for speed\nconst isBook = !isStart && !isAllCourses && [\n  'book', 'books', 'material', 'notes', 'pdf',\n  'study material', 'kota module', 'pyq', 'previous year'\n].some(k => lower.includes(k));\n\n// TEST SERIES — kept as keyword for speed\nconst isTest = !isStart && !isAllCourses && !isBook && [\n  'test', 'tests', 'mock', 'series', 'practice',\n  'quiz', 'free test', 'test series'\n].some(k => lower.includes(k));\n\n// COURSE QUERY — now goes to AI for smart recommendation\n// instead of dumping all links\nconst isCourseQuery = !isStart && !isAllCourses && !isBook && !isTest && [\n  'course', 'courses', 'batch', 'join', 'admission',\n  'enroll', 'enrolment', 'live class', 'recorded',\n  'physics course', 'maths course', 'class 11', 'class 12',\n  '11th course', '12th course', 'dropper course', '11 course',\n  '12 course', 'dropper batch', 'crash course', 'rank booster'\n].some(k => lower.includes(k));\n\n// Everything else — AI handles (general queries, fees, doubts etc.)\nconst isKeyword = isStart || isAllCourses || isBook || isTest;\n\n// ─── MOBILE DETECTION ─────────────────────────────────────\nconst mobileMatch = text.match(/[6-9]\\d{9}/);\nconst detectedMobile = mobileMatch ? mobileMatch[0] : '';\n\n// ─── CLASS DETECTION ──────────────────────────────────────\nlet currentClass = '';\nif      (lower.includes('11th') || lower.includes('class 11') || lower.includes('11 th')) currentClass = '11th';\nelse if (lower.includes('12th') || lower.includes('class 12') || lower.includes('12 th')) currentClass = '12th';\nelse if (lower.includes('dropper') || lower.includes('drop') || lower.includes('13th'))   currentClass = 'Dropper';\n\n// ─── JEE YEAR DETECTION ───────────────────────────────────\nlet jeeYear = '';\nif      (lower.includes('2026')) jeeYear = 'JEE 2026';\nelse if (lower.includes('2027')) jeeYear = 'JEE 2027';\nelse if (lower.includes('2028')) jeeYear = 'JEE 2028';\nelse if (lower.includes('dropper'))  jeeYear = 'Dropper';\n\n// ─── INTEREST DETECTION ───────────────────────────────────\nlet interestedIn = 'General Query';\nif      (['fees','fee','price','payment','pay','cost','charges','kitne','kitna','how much'].some(k => lower.includes(k))) interestedIn = 'Fees / Payment';\nelse if (['admission','enroll','join','batch','seat','kab se','lena hai'].some(k => lower.includes(k)))                   interestedIn = 'Admission / Enrollment';\nelse if (['book','notes','material','pdf','kota module','pyq'].some(k => lower.includes(k)))                              interestedIn = 'Books / Notes';\nelse if (isCourseQuery)                                                                                                    interestedIn = 'Course Info';\nelse if (['test','mock','series','practice','quiz'].some(k => lower.includes(k)))                                         interestedIn = 'Test Series';\nelse if (['doubt','question','problem','solve','explain'].some(k => lower.includes(k)))                                   interestedIn = 'Academic Doubt';\nelse if (['discount','offer','coupon','scholarship'].some(k => lower.includes(k)))                                        interestedIn = 'Discount / Offer';\n\nreturn [{ json: {\n  userId, chatId, fullName, firstName, username,\n  text, lower,\n  dateTime,\n  isStart, isAllCourses, isBook, isTest, isCourseQuery, isKeyword,\n  currentClass, jeeYear, interestedIn,\n  detectedMobile\n}}];\n"
+      },
+      "id": "f576c701-0aa0-4956-95b1-3558816ea5b4",
+      "name": "01 | Extract Message Data2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9104,
+        8320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "lookup",
+        "documentId": {
+          "__rl": true,
+          "value": "1XhwGeYW5nh8M840IbwRQkPT85mN3I2K5lxIMWC_9L2o",
+          "mode": "id"
+        }
+      },
+      "id": "56185926-c606-438e-8dd2-9faca9b929f5",
+      "name": "02 | Lookup Student in Sheet2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        9328,
+        8320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VypfmwA2UBBQbpAt",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// ═══════════════════════════════════════════════════════════\n// NODE 03 — MERGE SHEET DATA + CALCULATE LEAD SCORE\n// ═══════════════════════════════════════════════════════════\nconst row = $input.first()?.json || {};\nconst d   = $('01 | Extract Message Data2').first().json;\n\nconst isExisting = !row.error &&\n                   String(row['Platform User ID'] || '').trim() !== '';\n\nconst onboardingStep = isExisting ? (row['Lead Status'] || 'done') : 'new';\nconst savedMobile    = row['Mobile Number'] || '';\nconst prevCount      = parseInt(row['Interaction Count'] || '0');\nconst newCount       = prevCount + 1;\n\nconst resolvedClass   = d.currentClass || row['Current Class']   || '';\nconst resolvedJeeYear = d.jeeYear      || row['JEE Target Year'] || '';\n\n// ─── POINTS-BASED LEAD SCORING ───────────────────────────\nconst lower = d.lower;\nlet scoreGained = 0;\n\n// +4 asked about fees / price / payment\nif (['fees','fee','kitne','kitna','price','pricing','cost','charges',\n     'how much','kitni','payment','pay'].some(k => lower.includes(k))) scoreGained += 4;\n\n// +3 asked about joining / admission\nif (['admission','enroll','enrolment','join karna','join krna',\n     'lena hai','leni hai','kab se','batch kab','seat',\n     'last date','kab start'].some(k => lower.includes(k))) scoreGained += 3;\n\n// +2 asked comparison / worth-it questions  \nif (['worth','worth it','kaisa hai','good hai','better hai',\n     'recommend','guarantee','result kaisa','sahi hai',\n     'achha hai','best hai'].some(k => lower.includes(k))) scoreGained += 2;\n\n// +2 repeat visitor — 3 or more interactions\nif (newCount >= 3) scoreGained += 2;\n\n// +1 shared class or JEE year\nif (d.currentClass || d.jeeYear) scoreGained += 1;\n\n// +1 asked about schedule / content details\nif (['syllabus','kitne ghante','recorded','live','schedule',\n     'timetable','demo','trial','kitne chapter',\n     'topic','content'].some(k => lower.includes(k))) scoreGained += 1;\n\n// +1 asked about discount or scholarship\nif (['discount','offer','coupon','scholarship',\n     'concession','free'].some(k => lower.includes(k))) scoreGained += 1;\n\n// Accumulate — never reset\nconst prevScore  = parseInt(row['Lead Score'] || '0');\nconst totalScore = prevScore + scoreGained;\n\nlet leadPriority = 'Cold';\nif      (totalScore >= 4) leadPriority = 'Hot';\nelse if (totalScore >= 1) leadPriority = 'Warm';\n\n// Never downgrade\nconst priorityRank     = { Hot: 3, Warm: 2, Cold: 1 };\nconst existingPriority = row['Lead Priority'] || 'Cold';\nconst resolvedPriority = (priorityRank[leadPriority] || 1) >= (priorityRank[existingPriority] || 1)\n  ? leadPriority : existingPriority;\n\nreturn [{ json: {\n  ...d,\n  isExisting,\n  onboardingStep,\n  savedMobile,\n  newCount,\n  resolvedClass,\n  resolvedJeeYear,\n  resolvedPriority,\n  totalScore,\n  existingRow: isExisting ? row : null\n}}];\n"
+      },
+      "id": "9b8fd331-5a2f-43f1-9d11-f2ad85cc7150",
+      "name": "03 | Merge Data + Score Lead2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        9552,
+        8320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.onboardingStep}}",
+              "value2": "new"
+            }
+          ]
+        }
+      },
+      "id": "9e17cd5e-fa62-40d7-a0f2-9a61ee6f6777",
+      "name": "04 | Is Brand New Student?2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        9776,
+        8320
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "👋 Hey! Welcome to *UpliftJEE* — India's top online JEE coaching by *Om Sir* 🎯\n\nBefore I help you, just tell me — *what's your name?* 😊",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "e78e8f71-2433-4737-94fe-a3062c8f684f",
+      "name": "05 | Ask Name2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        9984,
+        8112
+      ],
+      "webhookId": "956f6d35-38c9-461a-a2c7-0fc2d3980d42",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1XhwGeYW5nh8M840IbwRQkPT85mN3I2K5lxIMWC_9L2o",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Student CRM",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Date & Time": "={{.dateTime}}",
+            "Student Name": "={{.fullName}}",
+            "Mobile Number": "",
+            "Current Class": "",
+            "JEE Target Year": "",
+            "Interested In": "={{.interestedIn}}",
+            "Source": "Telegram",
+            "Lead Status": "New",
+            "Lead Priority": "Cold",
+            "Lead Score": "0",
+            "Interaction Count": "1",
+            "Last Contact Date": "={{.dateTime}}",
+            "Notes": "",
+            "Platform User ID": "={{.userId}}"
+          }
+        },
+        "options": {}
+      },
+      "id": "11e5dfe8-e062-4ea7-9ccb-a65cbc99d375",
+      "name": "06 | Create Initial Sheet Row2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        10208,
+        8112
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VypfmwA2UBBQbpAt",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.onboardingStep}}",
+              "value2": "asked_name"
+            }
+          ]
+        }
+      },
+      "id": "10004458-9fc5-4e1f-b7d8-524a427cb9e9",
+      "name": "07 | Waiting for Name?2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        9984,
+        8400
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "Nice to meet you, *{{$json.text}}*! 😊\n\nOne last thing — could you share your *mobile number*?\n\n🔒 _Your number is safe and will only be used by Om Sir's team to help you with admissions. It will never be shared with anyone._",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "331ec758-15e3-4276-aa6e-b277287d0055",
+      "name": "08 | Ask Mobile Number2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        10208,
+        8320
+      ],
+      "webhookId": "28fddb69-3f86-4188-920b-df558ed93ee4",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1XhwGeYW5nh8M840IbwRQkPT85mN3I2K5lxIMWC_9L2o",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Student CRM",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Platform User ID": "={{.userId}}",
+            "Student Name": "={{.text}}",
+            "Last Contact Date": "={{.dateTime}}"
+          }
+        },
+        "options": {}
+      },
+      "id": "d38c31be-92e7-4b45-9891-df78dc6c3eb7",
+      "name": "09 | Save Name to Sheet2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        10432,
+        8320
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VypfmwA2UBBQbpAt",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.onboardingStep}}",
+              "value2": "asked_mobile"
+            }
+          ]
+        }
+      },
+      "id": "e172f9fb-a9b0-49c2-98a5-b3e911ba542b",
+      "name": "10 | Waiting for Mobile?2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        9984,
+        8576
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const d = $input.first().json;\nconst text = d.text || '';\nconst mobileMatch = text.match(/[6-9]\\d{9}/);\nconst mobile = mobileMatch ? mobileMatch[0] : '';\nreturn [{ json: { ...d, collectedMobile: mobile, isValidMobile: mobile.length === 10 } }];\n"
+      },
+      "id": "1c2f712e-9348-4171-ab47-47c86de47cc8",
+      "name": "11 | Validate Mobile Number2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        10208,
+        8576
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.isValidMobile}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "abf01acb-af9f-48e4-b459-eadaaabf36de",
+      "name": "12 | Valid Mobile?2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        10432,
+        8576
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "Hmm, that doesn't look right 🤔\n\nCould you please share your *10-digit mobile number*?\nExample: 9876543210",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "db73c42c-9189-4ead-adc2-2b21e454d157",
+      "name": "13 | Ask Mobile Again (Invalid)2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        10656,
+        8720
+      ],
+      "webhookId": "805cc302-e503-4dd6-b23e-aef2f2ca541c",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1XhwGeYW5nh8M840IbwRQkPT85mN3I2K5lxIMWC_9L2o",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Student CRM",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Platform User ID": "={{.userId}}",
+            "Mobile Number": "={{.collectedMobile}}",
+            "Last Contact Date": "={{.dateTime}}"
+          }
+        },
+        "options": {}
+      },
+      "id": "d688c414-cab4-42a3-b754-49b252741e2b",
+      "name": "14 | Save Mobile to Sheet2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        10656,
+        8464
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VypfmwA2UBBQbpAt",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "additionalFields": {
+          "biographies": {
+            "biographyValues": [
+              {
+                "value": "UpliftJEE Student\nClass: {{$json.resolvedClass || 'Not provided'}}\nJEE Year: {{$json.resolvedJeeYear || 'Not provided'}}\nInterest: {{$json.interestedIn}}\nLead Priority: {{$json.resolvedPriority}}\nFirst Contact: {{$json.dateTime}}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "ca4555da-91e2-466a-a612-f6f2a06bdfde",
+      "name": "15 | Save to Google Contacts (Sir)2",
+      "type": "n8n-nodes-base.googleContacts",
+      "typeVersion": 1,
+      "position": [
+        10864,
+        8464
+      ],
+      "credentials": {
+        "googleContactsOAuth2Api": {
+          "id": "rvcVnNcQOKTkJ8JR",
+          "name": "Google Contacts account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "Perfect! You're all set 🎉\n\nWelcome to *UpliftJEE* — taught by *Om Sir (Om Sharma)*, one of India's finest JEE teachers 🚀\n\nHere's what I can help you with:\n\n📚 *book* — Books & Study Material\n📝 *test* — Test Series & Mock Tests\n📦 *kota module* — Kota Study Modules\n📖 *pyq* — Previous Year Questions\n\nOr just *ask me anything* in your own words — course recommendations, fees, doubts, anything!\n\nI understand Hindi, English and Hinglish too 😄",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "99af0dd6-626c-482d-84dc-dbf7d44bdf5c",
+      "name": "16 | Show Welcome Menu (After Onboarding)2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        11088,
+        8464
+      ],
+      "webhookId": "264cf06c-0434-4438-9679-886b9f5fc965",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.isStart}}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "b121af9e-ace2-4365-91a9-f0925fde048d",
+      "name": "Check Start3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        10208,
+        8880
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "👋 Welcome back to *UpliftJEE!*\n\nHere's what I can help with:\n\n📚 *book* — Books & Study Material\n📝 *test* — Test Series & Mock Tests\n📦 *kota module* — Kota Study Modules\n📖 *pyq* — Previous Year Questions\n\nOr just ask me anything — course info, fees, doubts — I'm here 24×7! 🚀",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "b30c0661-0fd4-4681-bcbf-4b884b8d50dd",
+      "name": "Welcome Message3",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        10432,
+        8752
+      ],
+      "webhookId": "e075a9bf-7c53-4ef8-854d-2aa3c87adb86",
+      "credentials": {
+        "telegramApi": {
+          "id": "3gcPKGlowlugegS3",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.isAllCourses}}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "be3beabe-1a79-4b4b-818e-a526b9e3ebaa",
+      "name": "Check All Courses Fallback2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        10432,
+        8912
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$('01 | Extract Message Data2').item.json.chatId}}",
+        "text": "📋 *All UpliftJEE Courses — Complete List*\n\n━━━━━━━━━━━━━━━\n*🔴 COMBO COURSES (Physics + Maths)*\n━━━━━━━━━━━━━━━\n\n*Class 12th — JEE 2027 (Year Long)*\n💰 ₹27,999 _(was ₹34,999)_\n👉 https://upliftjee.com/new-courses/24-class-12th-jee-main-advanced-2027-year-long-course\n\n*Class 11th — JEE 2028 (Year Long)*\n💰 ₹27,999 _(was ₹34,999)_\n👉 https://upliftjee.com/new-courses/23-class-11th-jee-main-advanced-2028-year-long-course\n\n*Early Droppers 13th Batch — JEE 2027*\n💰 ₹19,999 _(was ₹34,999 — 43% off!)_\n👉 https://upliftjee.com/new-courses/27-early-droppers-13th-batch-physics-maths-jee-main-adv-2027-year-long-course\n\n━━━━━━━━━━━━━━━\n*📐 MATHS ONLY (Om Sir)*\n━━━━━━━━━━━━━━━\n\n*Class 11 Maths — JEE 2028*\n💰 ₹16,999 _(was ₹19,999)_\n👉 https://upliftjee.com/new-courses/32-class-11-mathematics-for-iit-jee-main-advanced-2028-complete-course-by-om-sharma\n\n*Class 12 Maths — JEE 2027*\n💰 ₹16,999 _(was ₹19,999)_\n👉 https://upliftjee.com/new-courses/34-class-12-mathematics-for-iit-jee-main-advanced-2027-complete-course-by-om-sharma\n\n*Droppers 13th Maths — JEE 2027*\n💰 ₹16,999 _(was ₹19,999)_\n👉 https://upliftjee.com/new-courses/37-droppers-13th-mathematics-for-iit-jee-main-advanced-2027-complete-course-by-om-sharma\n\n━━━━━━━━━━━━━━━\n*⚡ PHYSICS ONLY*\n━━━━━━━━━━━━━━━\n\n*Class 11th Physics Recorded*\n💰 ₹16,999 _(was ₹19,999)_\n👉 https://upliftjee.com/new-courses?examId=8\n\n*Class 12th Physics Recorded*\n💰 ₹16,999 _(was ₹19,999)_\n👉 https://upliftjee.com/new-courses?examId=8\n\n*Optics, Modern & Semiconductor Physics (Pankaj Gupta Sir)*\n💰 ₹3,499 _(was ₹5,499)_\n👉 https://upliftjee.com/new-courses?examId=8\n\n━━━━━━━━━━━━━━━\n*🚀 CRASH COURSE*\n━━━━━━━━━━━━━━━\n\n*Rank Booster — JEE Advanced 2026*\n💰 ₹2,999 _(was ₹5,999 — 51% off!)_\n👉 https://upliftjee.com/new-courses/22-rank-booster-crash-course-for-jee-advanced-2026\n\n━━━━━━━━━━━━━━━\n📱 *Browse all:* https://upliftjee.com/new-courses?examId=2\n\n_Need help choosing the right one? Just tell me your class and JEE year — I'll recommend the best fit!_",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "c3838347-1394-4c44-956b-6416a8d30fae",
+      "name": "Send All Courses List2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        10656,
+        8800
+      ],
+      "webhookId": "865e8f9e-66a0-42e8-bc27-e1446d0f0e54",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.isBook}}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "ad6d5560-9551-4287-9e79-34d61b0eadaa",
+      "name": "Check Books2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        10656,
+        8992
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$('01 | Extract Message Data2').item.json.chatId}}",
+        "text": "📚 *UpliftJEE — Books & Study Material*\n\n*JEE Maths Books by Om Sir:*\n👉 https://www.upliftmaths.com/collections/best-jee-maths-books\n\n*Kota Study Modules:*\n👉 https://upliftjee.com/study-material\n\n*Previous Year Questions (PYQs):*\n👉 https://upliftjee.com/new-courses?examId=5\n\n*Book Store:*\n👉 https://upliftjee.com/books\n\n_All material is carefully selected for JEE Main + Advanced preparation 💪_",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "bdeefaef-0d25-4f68-9fc7-b0fcd9a6b205",
+      "name": "Send Books3",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        10864,
+        8896
+      ],
+      "webhookId": "3595c05a-7440-42bf-9cf9-105d42c79657",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.isTest}}",
+              "value2": "true"
+            }
+          ]
+        }
+      },
+      "id": "e0e8239c-ebc8-46e8-915a-21cb858856d0",
+      "name": "Check Test2",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        10864,
+        9104
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$('01 | Extract Message Data2').item.json.chatId}}",
+        "text": "📝 *UpliftJEE — Test Series*\n\n*🆓 Free Test Series:*\n👉 https://upliftjee.com/previous-year\n\n*📊 Full Test Series:*\n👉 https://upliftjee.com/test-series\n\n_Full-length JEE Main + Advanced tests with detailed solutions and rank tracking ✅_",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "68007041-8db2-481d-a630-48f0ae425123",
+      "name": "Send Test3",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        11088,
+        8992
+      ],
+      "webhookId": "cf6904af-3127-4464-baf6-802f5d45cd6f",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// ═══════════════════════════════════════════════════════════\n// AI PREP — SMART PROMPT WITH FULL COURSE DATA\n// Handles: course recommendations, fees, general queries,\n//          academic doubts, anything not matched by keywords\n// ═══════════════════════════════════════════════════════════\nconst d    = $('03 | Merge Data + Score Lead2').first().json;\nconst text = d.text;\nconst name = d.existingRow?.['Telegram Full Name'] || d.fullName || 'student';\nconst isHot = d.resolvedPriority === 'Hot';\nconst isCourseQuery = d.isCourseQuery;\n\n// Tone changes based on lead heat\nconst toneInstruction = isHot\n  ? `This student is a HOT LEAD — they have shown strong buying intent. Be warm, engaging, and slightly frank like a helpful senior student. Be encouraging without being pushy. Make them feel confident about joining. Keep them interested.`\n  : `Be friendly, helpful, and student-focused. Keep it natural and concise.`;\n\n// Special instruction when student is asking about a course\nconst courseInstruction = isCourseQuery\n  ? `\nIMPORTANT — COURSE RECOMMENDATION MODE:\nThe student is asking about a specific course. DO NOT dump all courses.\nRead their message carefully and recommend ONLY the 1 or 2 most relevant courses.\nIf their class or JEE year is clear from the message, pick the exact matching course.\nIf it is NOT clear, ask ONE simple question: \"Are you in 11th, 12th, or are you a Dropper?\"\nAlways include the direct purchase link for whatever you recommend.\nAfter your reply, add this line at the very end on a new line:\n_Not what you were looking for? Type *all courses* to see the complete list._`\n  : '';\n\nconst systemPrompt = `You are a smart and helpful assistant for UpliftJEE — a top online JEE coaching platform by Om Sir (Om Sharma) and Pankaj Gupta Sir.\n\n${toneInstruction}\n${courseInstruction}\n\nAlways reply in the SAME LANGUAGE the student uses — Hindi, English, or Hinglish.\nKeep replies SHORT — maximum 5 lines. Do not write long paragraphs.\nDo NOT use more than 2 emojis per reply.\nDo NOT sound like a robot or a salesman.\n\n━━━━━━━━━━━━━━━━━━━━\nCOMPLETE COURSE CATALOGUE:\n━━━━━━━━━━━━━━━━━━━━\n\nCOMBO COURSES (Physics + Maths):\n1. Class 12th Physics & Maths — JEE 2027 (Year Long)\n   Price: ₹27,999 (was ₹34,999 — 21% off)\n   Link: https://upliftjee.com/new-courses/24-class-12th-jee-main-advanced-2027-year-long-course\n\n2. Class 11th Physics & Maths — JEE 2028 (Year Long)\n   Price: ₹27,999 (was ₹34,999 — 21% off)\n   Link: https://upliftjee.com/new-courses/23-class-11th-jee-main-advanced-2028-year-long-course\n\n3. Early Droppers 13th Batch Physics & Maths — JEE 2027 (Year Long)\n   Price: ₹19,999 (was ₹34,999 — 43% off)\n   Link: https://upliftjee.com/new-courses/27-early-droppers-13th-batch-physics-maths-jee-main-adv-2027-year-long-course\n\nMATHS ONLY (by Om Sharma Sir):\n4. Class 11 Maths — JEE 2028\n   Price: ₹16,999 (was ₹19,999 — 16% off)\n   Link: https://upliftjee.com/new-courses/32-class-11-mathematics-for-iit-jee-main-advanced-2028-complete-course-by-om-sharma\n\n5. Class 12 Maths — JEE 2027\n   Price: ₹16,999 (was ₹19,999 — 16% off)\n   Link: https://upliftjee.com/new-courses/34-class-12-mathematics-for-iit-jee-main-advanced-2027-complete-course-by-om-sharma\n\n6. Droppers 13th Maths — JEE 2027\n   Price: ₹16,999 (was ₹19,999 — 16% off)\n   Link: https://upliftjee.com/new-courses/37-droppers-13th-mathematics-for-iit-jee-main-advanced-2027-complete-course-by-om-sharma\n\nPHYSICS ONLY:\n7. Class 11th Physics Recorded — JEE Main & Advanced\n   Price: ₹16,999 (was ₹19,999 — 16% off)\n\n8. Class 12th Physics Recorded — JEE Main & Advanced\n   Price: ₹16,999 (was ₹19,999 — 16% off)\n\n9. Radiant Optics, Modern & Semiconductor Physics — JEE 12th/Dropper (Pankaj Gupta Sir)\n   Price: ₹3,499 (was ₹5,499 — 37% off)\n\nCRASH COURSE:\n10. Rank Booster Crash Course — JEE Advanced 2026\n    Price: ₹2,999 (was ₹5,999 — 51% off)\n    Link: https://upliftjee.com/new-courses/22-rank-booster-crash-course-for-jee-advanced-2026\n\nBROWSE ALL: https://upliftjee.com/new-courses?examId=2\n\n━━━━━━━━━━━━━━━━━━━━\nOTHER USEFUL LINKS:\n━━━━━━━━━━━━━━━━━━━━\nFree Test Series:  https://upliftjee.com/previous-year\nFull Test Series:  https://upliftjee.com/test-series\nKota Modules:      https://upliftjee.com/study-material\nBook Store:        https://upliftjee.com/books\nPYQs:              https://upliftjee.com/new-courses?examId=5\nAndroid App:       https://play.google.com/store/apps/details?id=com.xsxtvl.bhkceb\nMaths Books:       https://www.upliftmaths.com/collections/best-jee-maths-books\n\n━━━━━━━━━━━━━━━━━━━━\nHANDOFF RULE — VERY IMPORTANT:\n━━━━━━━━━━━━━━━━━━━━\nIf the student asks something you are NOT 100% sure about — like exact batch start dates, seat availability, custom discounts, payment issues, or personal account queries — do NOT guess.\nFirst answer whatever part you CAN. Then add:\n\"For this, please contact Om Sir directly 👇\n📞 WhatsApp / Call: 7240569576\"`;\n\nreturn [{ json: {\n  systemPrompt,\n  userMessage: `Student name: ${name}\\nMessage: ${text}`,\n  chatId: d.chatId\n}}];\n"
+      },
+      "id": "8c877b67-a0c7-4837-a07a-0c8608a5aed7",
+      "name": "AI-PREP | Build AI Prompt2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11088,
+        9200
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gpt-4o-mini\",\n  \"max_tokens\": 400,\n  \"temperature\": 0.7,\n  \"messages\": [\n    { \"role\": \"system\", \"content\": {{ JSON.stringify($json.systemPrompt) }} },\n    { \"role\": \"user\",   \"content\": {{ JSON.stringify($json.userMessage) }} }\n  ]\n}",
+        "options": {}
+      },
+      "id": "35b5450d-e4ad-4f96-8e6e-76d9580af45d",
+      "name": "AI-CALL | Ask OpenAI GPT-4o-mini2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        11312,
+        9200
+      ],
+      "disabled": true,
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const result = $input.first().json;\nconst chatId = $('AI-PREP | Build AI Prompt2').first().json.chatId;\nlet aiReply = '';\ntry {\n  aiReply = result.choices[0].message.content.trim();\n} catch(e) { aiReply = ''; }\n\nif (!aiReply || aiReply.length < 5) {\n  aiReply = \"Sorry, I couldn't process that right now 😅\\n\\nPlease try typing *book*, *test*, or *all courses* — or contact Om Sir directly:\\n📞 WhatsApp / Call: 7240569576\";\n}\n\nreturn [{ json: { aiReply, chatId } }];\n"
+      },
+      "id": "47debe34-64b3-4df4-aa2b-a221aa928af1",
+      "name": "AI-EXTRACT | Get AI Reply2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11536,
+        9200
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "={{$json.aiReply}}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "bdf11c0f-defd-4964-924f-be5af390f463",
+      "name": "Fallback Message2",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        11744,
+        9200
+      ],
+      "webhookId": "0afc7060-9ee2-40ef-a91c-f9a767ff52a8",
+      "credentials": {
+        "telegramApi": {
+          "id": "L7f2bJ9nF7zb9hdm",
+          "name": "Telegram account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1XhwGeYW5nh8M840IbwRQkPT85mN3I2K5lxIMWC_9L2o",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Student CRM",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Platform User ID": "={{.item.json.userId}}",
+            "Last Contact Date": "={{.item.json.dateTime}}",
+            "Lead Priority": "={{.item.json.resolvedPriority}}",
+            "Lead Score": "={{.item.json.totalScore}}",
+            "Interested In": "={{.item.json.interestedIn}}",
+            "Current Class": "={{.item.json.resolvedClass}}",
+            "JEE Target Year": "={{.item.json.resolvedJeeYear}}",
+            "Interaction Count": "={{.item.json.newCount}}"
+          }
+        },
+        "options": {}
+      },
+      "id": "c2d70d3a-9260-4669-9efb-a322f4e5c83c",
+      "name": "CRM | Update Student Row2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        11968,
+        8880
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "VypfmwA2UBBQbpAt",
+          "name": "Google Sheets account"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field called 'myNewField' to the JSON of each one\nreturn [{\n  json: {\n    choices: [\n      {\n        message: {\n          content: \"Demo response 🤖\\n\\nAI is currently disabled, but your workflow is working perfectly.\"\n        }\n      }\n    ]\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11312,
+        9568
+      ],
+      "id": "c9b5bfbf-1df6-4396-99f2-b15ab5ccd592",
+      "name": "Code in JavaScript"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger3": {
+      "main": [
+        [
+          {
+            "node": "01 | Extract Message Data2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "01 | Extract Message Data2": {
+      "main": [
+        [
+          {
+            "node": "02 | Lookup Student in Sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "02 | Lookup Student in Sheet2": {
+      "main": [
+        [
+          {
+            "node": "03 | Merge Data + Score Lead2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "03 | Merge Data + Score Lead2": {
+      "main": [
+        [
+          {
+            "node": "04 | Is Brand New Student?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "04 | Is Brand New Student?2": {
+      "main": [
+        [
+          {
+            "node": "05 | Ask Name2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "07 | Waiting for Name?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "05 | Ask Name2": {
+      "main": [
+        [
+          {
+            "node": "06 | Create Initial Sheet Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "07 | Waiting for Name?2": {
+      "main": [
+        [
+          {
+            "node": "08 | Ask Mobile Number2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "10 | Waiting for Mobile?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "08 | Ask Mobile Number2": {
+      "main": [
+        [
+          {
+            "node": "09 | Save Name to Sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10 | Waiting for Mobile?2": {
+      "main": [
+        [
+          {
+            "node": "11 | Validate Mobile Number2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check Start3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "11 | Validate Mobile Number2": {
+      "main": [
+        [
+          {
+            "node": "12 | Valid Mobile?2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "12 | Valid Mobile?2": {
+      "main": [
+        [
+          {
+            "node": "14 | Save Mobile to Sheet2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "13 | Ask Mobile Again (Invalid)2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "14 | Save Mobile to Sheet2": {
+      "main": [
+        [
+          {
+            "node": "15 | Save to Google Contacts (Sir)2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "15 | Save to Google Contacts (Sir)2": {
+      "main": [
+        [
+          {
+            "node": "16 | Show Welcome Menu (After Onboarding)2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Start3": {
+      "main": [
+        [
+          {
+            "node": "Welcome Message3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check All Courses Fallback2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Welcome Message3": {
+      "main": [
+        [
+          {
+            "node": "CRM | Update Student Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check All Courses Fallback2": {
+      "main": [
+        [
+          {
+            "node": "Send All Courses List2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check Books2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send All Courses List2": {
+      "main": [
+        [
+          {
+            "node": "CRM | Update Student Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Books2": {
+      "main": [
+        [
+          {
+            "node": "Send Books3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Check Test2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Books3": {
+      "main": [
+        [
+          {
+            "node": "CRM | Update Student Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Test2": {
+      "main": [
+        [
+          {
+            "node": "Send Test3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI-PREP | Build AI Prompt2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Test3": {
+      "main": [
+        [
+          {
+            "node": "CRM | Update Student Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI-PREP | Build AI Prompt2": {
+      "main": [
+        [
+          {
+            "node": "AI-CALL | Ask OpenAI GPT-4o-mini2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI-CALL | Ask OpenAI GPT-4o-mini2": {
+      "main": [
+        [
+          {
+            "node": "AI-EXTRACT | Get AI Reply2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI-EXTRACT | Get AI Reply2": {
+      "main": [
+        [
+          {
+            "node": "Fallback Message2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fallback Message2": {
+      "main": [
+        [
+          {
+            "node": "CRM | Update Student Row2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "AI-EXTRACT | Get AI Reply2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "ea1fc7a3-28ca-4681-a6b2-e520886fd4b0",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "97cdaab89af73ebd5970b4d23e9d1859d7eb3b935c78db3eb6127ddba5b4902d"
+  },
+  "id": "g4PvcAMHNJjSJCRm",
+  "tags": []
+}

@@ -1,0 +1,787 @@
+2026-06-13 12:55:51,957 [INFO] Connecting...
+2026-06-13 12:55:52,096 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 12:55:52,103 [INFO] NetworkTask started
+2026-06-13 12:55:53,773 [INFO] Session initialized: Layer 158
+2026-06-13 12:55:53,774 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 12:55:53,774 [INFO] System: Windows 11 (en)
+2026-06-13 12:55:53,774 [INFO] Session started
+2026-06-13 12:55:53,778 [INFO] PingTask started
+2026-06-13 12:55:54,265 [INFO] Started 12 HandlerTasks
+2026-06-13 12:55:54,266 [INFO] ✅ Automation account connected!
+2026-06-13 12:55:54,270 [INFO] 📢 Broadcast shuru ho raha hai...
+2026-06-13 12:55:58,070 [INFO] ✅ Bheja (1): Vyom
+2026-06-13 12:56:02,764 [INFO] ✅ Broadcast complete — 1 members ko bheja!
+2026-06-13 12:56:02,772 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 12:56:02,773 [INFO] Start polling
+2026-06-13 12:56:07,691 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 12:56:08,003 [INFO] Update id=96037677 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 12:56:08,005 [INFO] Update id=96037678 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 12:57:13,366 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-13 12:57:17,261 [INFO] ✅ Existing user joined — welcome back bheja: Vyom
+2026-06-13 12:57:17,262 [INFO] Update id=96037679 is handled. Duration 7390 ms by bot id=8727661182
+2026-06-13 12:58:18,957 [INFO] 📩 Message aaya — VYOM: Everything fine ?
+2026-06-13 12:58:19,571 [INFO] 📂 History restore ki — VYOM (2 msgs)
+2026-06-13 12:58:19,776 [INFO] 🧠 Thinking budget: 1024 — Everything fine ?
+2026-06-13 12:58:19,787 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 12:58:29,706 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 12:58:31,140 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:02:04,824 [INFO] NetworkTask stopped
+2026-06-13 13:02:04,834 [INFO] PingTask stopped
+2026-06-13 13:02:04,842 [INFO] Disconnected
+2026-06-13 13:02:04,844 [INFO] Session stopped
+2026-06-13 13:02:04,857 [INFO] Connecting...
+2026-06-13 13:02:05,879 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:05,883 [INFO] NetworkTask started
+2026-06-13 13:02:07,904 [INFO] NetworkTask stopped
+2026-06-13 13:02:07,905 [INFO] Disconnected
+2026-06-13 13:02:07,905 [INFO] Session stopped
+2026-06-13 13:02:07,906 [INFO] Connecting...
+2026-06-13 13:02:08,741 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:08,743 [INFO] NetworkTask started
+2026-06-13 13:02:10,752 [INFO] NetworkTask stopped
+2026-06-13 13:02:10,753 [INFO] Disconnected
+2026-06-13 13:02:10,754 [INFO] Session stopped
+2026-06-13 13:02:10,755 [INFO] Connecting...
+2026-06-13 13:02:12,021 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:12,024 [INFO] NetworkTask started
+2026-06-13 13:02:14,031 [INFO] NetworkTask stopped
+2026-06-13 13:02:14,035 [INFO] Disconnected
+2026-06-13 13:02:14,036 [INFO] Session stopped
+2026-06-13 13:02:14,038 [INFO] Connecting...
+2026-06-13 13:02:15,060 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:15,062 [INFO] NetworkTask started
+2026-06-13 13:02:17,071 [INFO] NetworkTask stopped
+2026-06-13 13:02:17,072 [INFO] Disconnected
+2026-06-13 13:02:17,073 [INFO] Session stopped
+2026-06-13 13:02:17,074 [INFO] Connecting...
+2026-06-13 13:02:17,446 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:17,448 [INFO] NetworkTask started
+2026-06-13 13:02:19,469 [INFO] NetworkTask stopped
+2026-06-13 13:02:19,469 [INFO] Disconnected
+2026-06-13 13:02:19,470 [INFO] Session stopped
+2026-06-13 13:02:19,471 [INFO] Connecting...
+2026-06-13 13:02:19,771 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:19,772 [INFO] NetworkTask started
+2026-06-13 13:02:21,781 [INFO] NetworkTask stopped
+2026-06-13 13:02:21,784 [INFO] Disconnected
+2026-06-13 13:02:21,786 [INFO] Session stopped
+2026-06-13 13:02:21,787 [INFO] Connecting...
+2026-06-13 13:02:22,824 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:22,826 [INFO] NetworkTask started
+2026-06-13 13:02:24,839 [INFO] NetworkTask stopped
+2026-06-13 13:02:24,840 [INFO] Disconnected
+2026-06-13 13:02:24,840 [INFO] Session stopped
+2026-06-13 13:02:24,842 [INFO] Connecting...
+2026-06-13 13:02:25,331 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:25,332 [INFO] NetworkTask started
+2026-06-13 13:02:27,341 [INFO] NetworkTask stopped
+2026-06-13 13:02:27,342 [INFO] Disconnected
+2026-06-13 13:02:27,343 [INFO] Session stopped
+2026-06-13 13:02:27,345 [INFO] Connecting...
+2026-06-13 13:02:28,453 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:28,454 [INFO] NetworkTask started
+2026-06-13 13:02:30,468 [INFO] NetworkTask stopped
+2026-06-13 13:02:30,469 [INFO] Disconnected
+2026-06-13 13:02:30,469 [INFO] Session stopped
+2026-06-13 13:02:30,470 [INFO] Connecting...
+2026-06-13 13:02:32,038 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:32,039 [INFO] NetworkTask started
+2026-06-13 13:02:34,042 [INFO] NetworkTask stopped
+2026-06-13 13:02:34,043 [INFO] Disconnected
+2026-06-13 13:02:34,043 [INFO] Session stopped
+2026-06-13 13:02:34,044 [INFO] Connecting...
+2026-06-13 13:02:35,265 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:35,274 [INFO] NetworkTask started
+2026-06-13 13:02:37,290 [INFO] NetworkTask stopped
+2026-06-13 13:02:37,291 [INFO] Disconnected
+2026-06-13 13:02:37,292 [INFO] Session stopped
+2026-06-13 13:02:37,294 [INFO] Connecting...
+2026-06-13 13:02:37,721 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:37,723 [INFO] NetworkTask started
+2026-06-13 13:02:39,729 [INFO] NetworkTask stopped
+2026-06-13 13:02:39,730 [INFO] Disconnected
+2026-06-13 13:02:39,730 [INFO] Session stopped
+2026-06-13 13:02:39,735 [INFO] Connecting...
+2026-06-13 13:02:39,953 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:39,956 [INFO] NetworkTask started
+2026-06-13 13:02:41,973 [INFO] NetworkTask stopped
+2026-06-13 13:02:41,973 [INFO] Disconnected
+2026-06-13 13:02:41,974 [INFO] Session stopped
+2026-06-13 13:02:41,975 [INFO] Connecting...
+2026-06-13 13:02:42,624 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:42,626 [INFO] NetworkTask started
+2026-06-13 13:02:44,635 [INFO] NetworkTask stopped
+2026-06-13 13:02:44,637 [INFO] Disconnected
+2026-06-13 13:02:44,638 [INFO] Session stopped
+2026-06-13 13:02:44,640 [INFO] Connecting...
+2026-06-13 13:02:45,811 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:45,814 [INFO] NetworkTask started
+2026-06-13 13:02:47,826 [INFO] NetworkTask stopped
+2026-06-13 13:02:47,827 [INFO] Disconnected
+2026-06-13 13:02:47,828 [INFO] Session stopped
+2026-06-13 13:02:47,829 [INFO] Connecting...
+2026-06-13 13:02:49,065 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:49,072 [INFO] NetworkTask started
+2026-06-13 13:02:51,086 [INFO] NetworkTask stopped
+2026-06-13 13:02:51,088 [INFO] Disconnected
+2026-06-13 13:02:51,090 [INFO] Session stopped
+2026-06-13 13:02:51,092 [INFO] Connecting...
+2026-06-13 13:02:51,955 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:02:51,958 [INFO] NetworkTask started
+2026-06-13 13:02:54,860 [INFO] Session initialized: Layer 158
+2026-06-13 13:02:54,861 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 13:02:54,861 [INFO] System: Windows 11 (en)
+2026-06-13 13:02:54,862 [INFO] Session started
+2026-06-13 13:02:54,863 [INFO] PingTask started
+2026-06-13 13:14:04,767 [INFO] Update id=96037680 is not handled. Duration 27 ms by bot id=8727661182
+2026-06-13 13:14:18,716 [INFO] 📩 Message aaya — VYOM: Hi sir
+2026-06-13 13:14:19,092 [INFO] 🧠 Thinking budget: 1024 — Hi sir
+2026-06-13 13:14:19,132 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:14:22,028 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:14:25,523 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:14:34,639 [INFO] ✅ Existing user joined — welcome back bheja: Vyom
+2026-06-13 13:14:34,640 [INFO] Update id=96037681 is handled. Duration 4074 ms by bot id=8727661182
+2026-06-13 13:25:20,285 [INFO] 📩 Message aaya — VYOM: Hi sir
+2026-06-13 13:25:20,841 [INFO] 🧠 Thinking budget: 1024 — Hi sir
+2026-06-13 13:25:20,851 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:25:26,938 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:25:30,138 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:26:07,388 [INFO] Update id=96037682 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 13:26:18,957 [INFO] ✅ New member — welcome bheja: Vyom
+2026-06-13 13:26:18,958 [INFO] Update id=96037683 is handled. Duration 6308 ms by bot id=8727661182
+2026-06-13 13:26:34,860 [INFO] 📩 Message aaya — VYOM: Hi sir
+2026-06-13 13:26:35,743 [INFO] 🧠 Thinking budget: 1024 — Hi sir
+2026-06-13 13:26:35,745 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:26:40,862 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:26:43,986 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:26:58,579 [INFO] 📩 Message aaya — VYOM: Sir demotivated hu
+2026-06-13 13:26:59,206 [INFO] 🧠 Thinking budget: 4000 — Sir demotivated hu
+2026-06-13 13:26:59,209 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:27:04,311 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:27:07,724 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:27:16,819 [INFO] 📩 Message aaya — VYOM: Test
+2026-06-13 13:27:17,107 [INFO] 🧠 Thinking budget: 1024 — Test
+2026-06-13 13:27:17,110 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:27:20,287 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:27:22,840 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:27:45,492 [INFO] Update id=96037684 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 13:28:03,604 [INFO] ✅ New member — welcome bheja: Vyom
+2026-06-13 13:28:03,606 [INFO] Update id=96037685 is handled. Duration 6555 ms by bot id=8727661182
+2026-06-13 13:28:06,680 [INFO] 📩 Message aaya — VYOM: Hi
+2026-06-13 13:28:07,376 [INFO] 🧠 Thinking budget: 1024 — Hi
+2026-06-13 13:28:07,379 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:28:10,668 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:28:12,717 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:29:46,320 [INFO] Update id=96037686 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 13:29:59,828 [INFO] ✅ New member — welcome bheja: Vyom
+2026-06-13 13:29:59,828 [INFO] Update id=96037687 is handled. Duration 5424 ms by bot id=8727661182
+2026-06-13 13:30:19,328 [INFO] 📩 Message aaya — VYOM: Test kaha hai
+2026-06-13 13:30:20,054 [INFO] 🧠 Thinking budget: 1024 — Test kaha hai
+2026-06-13 13:30:20,057 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:30:24,103 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:30:26,659 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:30:58,482 [INFO] NetworkTask stopped
+2026-06-13 13:30:58,485 [INFO] PingTask stopped
+2026-06-13 13:30:58,496 [INFO] Disconnected
+2026-06-13 13:30:58,497 [INFO] Session stopped
+2026-06-13 13:30:58,509 [INFO] Connecting...
+2026-06-13 13:30:59,223 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:30:59,224 [INFO] NetworkTask started
+2026-06-13 13:31:01,249 [INFO] NetworkTask stopped
+2026-06-13 13:31:01,251 [INFO] Disconnected
+2026-06-13 13:31:01,252 [INFO] Session stopped
+2026-06-13 13:31:01,257 [INFO] Connecting...
+2026-06-13 13:31:03,112 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:31:03,115 [INFO] NetworkTask started
+2026-06-13 13:31:05,122 [INFO] NetworkTask stopped
+2026-06-13 13:31:05,124 [INFO] Disconnected
+2026-06-13 13:31:05,125 [INFO] Session stopped
+2026-06-13 13:31:05,127 [INFO] Connecting...
+2026-06-13 13:31:06,143 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:31:06,146 [INFO] NetworkTask started
+2026-06-13 13:31:08,149 [INFO] NetworkTask stopped
+2026-06-13 13:31:08,150 [INFO] Disconnected
+2026-06-13 13:31:08,151 [INFO] Session stopped
+2026-06-13 13:31:08,152 [INFO] Connecting...
+2026-06-13 13:31:08,562 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:31:08,563 [INFO] NetworkTask started
+2026-06-13 13:31:10,582 [INFO] NetworkTask stopped
+2026-06-13 13:31:10,584 [INFO] Disconnected
+2026-06-13 13:31:10,585 [INFO] Session stopped
+2026-06-13 13:31:10,590 [INFO] Connecting...
+2026-06-13 13:31:11,406 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:31:11,407 [INFO] NetworkTask started
+2026-06-13 13:31:14,408 [INFO] Session initialized: Layer 158
+2026-06-13 13:31:14,409 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 13:31:14,410 [INFO] System: Windows 11 (en)
+2026-06-13 13:31:14,411 [INFO] Session started
+2026-06-13 13:31:14,412 [INFO] PingTask started
+2026-06-13 13:40:01,096 [INFO] NetworkTask stopped
+2026-06-13 13:40:01,097 [INFO] PingTask stopped
+2026-06-13 13:40:01,100 [INFO] Disconnected
+2026-06-13 13:40:01,100 [INFO] Session stopped
+2026-06-13 13:40:01,101 [INFO] Connecting...
+2026-06-13 13:40:02,871 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:40:02,872 [INFO] NetworkTask started
+2026-06-13 13:40:04,877 [INFO] NetworkTask stopped
+2026-06-13 13:40:04,878 [INFO] Disconnected
+2026-06-13 13:40:04,879 [INFO] Session stopped
+2026-06-13 13:40:04,879 [INFO] Connecting...
+2026-06-13 13:40:06,568 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:40:06,569 [INFO] NetworkTask started
+2026-06-13 13:40:08,581 [INFO] NetworkTask stopped
+2026-06-13 13:40:08,585 [INFO] Disconnected
+2026-06-13 13:40:08,586 [INFO] Session stopped
+2026-06-13 13:40:08,587 [INFO] Connecting...
+2026-06-13 13:40:10,005 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:40:10,006 [INFO] NetworkTask started
+2026-06-13 13:40:12,021 [INFO] NetworkTask stopped
+2026-06-13 13:40:12,022 [INFO] Disconnected
+2026-06-13 13:40:12,023 [INFO] Session stopped
+2026-06-13 13:40:12,024 [INFO] Connecting...
+2026-06-13 13:40:14,337 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:40:14,340 [INFO] NetworkTask started
+2026-06-13 13:45:49,622 [INFO] Connecting...
+2026-06-13 13:45:49,748 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:45:49,754 [INFO] NetworkTask started
+2026-06-13 13:45:51,944 [INFO] Session initialized: Layer 158
+2026-06-13 13:45:51,944 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 13:45:51,944 [INFO] System: Windows 11 (en)
+2026-06-13 13:45:51,945 [INFO] Session started
+2026-06-13 13:45:51,949 [INFO] PingTask started
+2026-06-13 13:45:53,710 [INFO] Started 12 HandlerTasks
+2026-06-13 13:45:53,711 [INFO] ✅ Automation account connected!
+2026-06-13 13:45:53,712 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-13 13:45:53,712 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 13:45:53,712 [INFO] Start polling
+2026-06-13 13:45:55,457 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 13:45:56,007 [INFO] Update id=96037688 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-13 13:46:13,872 [INFO] 📩 Message aaya — VYOM: hi
+2026-06-13 13:46:19,473 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-13 13:46:20,423 [INFO] 🧠 Thinking budget: 1024 — hi
+2026-06-13 13:46:20,428 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:46:28,409 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:46:30,400 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 13:46:44,283 [INFO] ✅ Existing user joined — welcome back bheja: Vyom
+2026-06-13 13:46:44,283 [INFO] Update id=96037689 is handled. Duration 7680 ms by bot id=8727661182
+2026-06-13 13:49:51,435 [INFO] Connecting...
+2026-06-13 13:49:52,392 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:49:52,395 [INFO] NetworkTask started
+2026-06-13 13:49:54,405 [INFO] NetworkTask stopped
+2026-06-13 13:49:54,406 [INFO] Disconnected
+2026-06-13 13:49:54,407 [INFO] Session stopped
+2026-06-13 13:49:54,407 [INFO] Connecting...
+2026-06-13 13:49:54,858 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 13:49:54,858 [INFO] NetworkTask started
+2026-06-13 13:49:57,517 [INFO] Session initialized: Layer 158
+2026-06-13 13:49:57,517 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 13:49:57,518 [INFO] System: Windows 11 (en)
+2026-06-13 13:49:57,518 [INFO] Session started
+2026-06-13 13:49:57,524 [INFO] PingTask started
+2026-06-13 13:49:59,259 [INFO] Started 12 HandlerTasks
+2026-06-13 13:49:59,260 [INFO] ✅ Automation account connected!
+2026-06-13 13:49:59,261 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-13 13:49:59,262 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 13:49:59,262 [INFO] Start polling
+2026-06-13 13:50:04,788 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 13:50:25,373 [INFO] 📩 Message aaya — VYOM: hi
+2026-06-13 13:50:48,921 [ERROR] ❌ History load error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-06-13 13:50:50,252 [INFO] 🧠 Thinking budget: 1024 — hi
+2026-06-13 13:50:50,255 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 13:51:01,104 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 13:51:10,319 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-13 13:51:11,753 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:19:31,471 [INFO] Connecting...
+2026-06-13 15:19:31,657 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 15:19:31,665 [INFO] NetworkTask started
+2026-06-13 15:19:32,221 [INFO] Session initialized: Layer 158
+2026-06-13 15:19:32,221 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:19:32,221 [INFO] System: Windows 11 (en)
+2026-06-13 15:19:32,221 [INFO] Session started
+2026-06-13 15:19:32,229 [INFO] PingTask started
+2026-06-13 15:19:32,496 [INFO] Started 12 HandlerTasks
+2026-06-13 15:19:32,497 [INFO] ✅ Automation account connected!
+2026-06-13 15:19:32,500 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-13 15:19:32,501 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 15:19:32,501 [INFO] Start polling
+2026-06-13 15:19:33,647 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 15:19:33,982 [INFO] Update id=96037690 is not handled. Duration 1 ms by bot id=8727661182
+2026-06-13 15:20:17,319 [INFO] 📩 Message aaya — VYOM: hi sir
+2026-06-13 15:20:21,241 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-13 15:20:21,827 [INFO] 🧠 Thinking budget: 1024 — hi sir
+2026-06-13 15:20:21,832 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:20:31,316 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:20:32,493 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:20:41,049 [INFO] ✅ Existing user joined — welcome back bheja: Vyom
+2026-06-13 15:20:41,050 [INFO] Update id=96037691 is handled. Duration 2704 ms by bot id=8727661182
+2026-06-13 15:20:49,962 [INFO] 📩 Message aaya — VYOM: book
+2026-06-13 15:20:50,087 [INFO] 🧠 Thinking budget: 1024 — book
+2026-06-13 15:20:50,090 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:20:52,818 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:20:53,904 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:22:22,623 [INFO] Connecting...
+2026-06-13 15:22:22,736 [INFO] Connected! Production DC5 (media) - IPv4
+2026-06-13 15:22:22,738 [INFO] NetworkTask started
+2026-06-13 15:22:23,277 [INFO] Session initialized: Layer 158
+2026-06-13 15:22:23,278 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:22:23,281 [INFO] System: Windows 11 (en)
+2026-06-13 15:22:23,282 [INFO] Session started
+2026-06-13 15:22:23,287 [INFO] PingTask started
+2026-06-13 15:22:23,947 [INFO] PingTask stopped
+2026-06-13 15:22:23,948 [INFO] NetworkTask stopped
+2026-06-13 15:22:23,948 [INFO] Disconnected
+2026-06-13 15:22:23,949 [INFO] Session stopped
+2026-06-13 15:22:23,950 [INFO] 📩 Message aaya — VYOM: [Image]
+2026-06-13 15:22:24,066 [INFO] 🧠 Thinking budget: 8000 — Image
+2026-06-13 15:22:24,072 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:22:51,932 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:22:54,053 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:23:17,649 [INFO] 📩 Message aaya — VYOM: ye solution hai ya hints
+2026-06-13 15:23:17,827 [INFO] 🧠 Thinking budget: 1024 — ye solution hai ya hints
+2026-06-13 15:23:17,829 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:23:22,396 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:23:23,489 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:30:24,242 [INFO] Connecting...
+2026-06-13 15:30:24,536 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 15:30:24,548 [INFO] NetworkTask started
+2026-06-13 15:30:25,249 [INFO] Session initialized: Layer 158
+2026-06-13 15:30:25,251 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:30:25,253 [INFO] System: Windows 11 (en)
+2026-06-13 15:30:25,255 [INFO] Session started
+2026-06-13 15:30:25,294 [INFO] PingTask started
+2026-06-13 15:30:25,590 [INFO] Started 12 HandlerTasks
+2026-06-13 15:30:25,591 [INFO] ✅ Automation account connected!
+2026-06-13 15:30:25,595 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-13 15:30:25,597 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 15:30:25,600 [INFO] Start polling
+2026-06-13 15:30:26,719 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 15:36:33,411 [INFO] Connecting...
+2026-06-13 15:36:33,517 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 15:36:33,521 [INFO] NetworkTask started
+2026-06-13 15:36:34,071 [INFO] Session initialized: Layer 158
+2026-06-13 15:36:34,074 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:36:34,076 [INFO] System: Windows 11 (en)
+2026-06-13 15:36:34,077 [INFO] Session started
+2026-06-13 15:36:34,087 [INFO] PingTask started
+2026-06-13 15:36:34,362 [INFO] Started 12 HandlerTasks
+2026-06-13 15:36:34,363 [INFO] ✅ Automation account connected!
+2026-06-13 15:36:34,364 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-13 15:36:34,365 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 15:36:34,366 [INFO] Start polling
+2026-06-13 15:36:35,200 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 15:37:50,562 [INFO] Connecting...
+2026-06-13 15:37:50,686 [INFO] Connected! Production DC5 - IPv4
+2026-06-13 15:37:50,691 [INFO] NetworkTask started
+2026-06-13 15:37:51,210 [INFO] Session initialized: Layer 158
+2026-06-13 15:37:51,211 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:37:51,212 [INFO] System: Windows 11 (en)
+2026-06-13 15:37:51,212 [INFO] Session started
+2026-06-13 15:37:51,223 [INFO] PingTask started
+2026-06-13 15:37:51,509 [INFO] Started 12 HandlerTasks
+2026-06-13 15:37:51,509 [INFO] ✅ Automation account connected!
+2026-06-13 15:37:51,510 [INFO] 📢 Broadcast shuru ho raha hai...
+2026-06-13 15:37:53,077 [INFO] ✅ Bheja (1): VYOM
+2026-06-13 15:37:58,409 [INFO] ✅ Bheja (2): Vyom
+2026-06-13 15:38:02,588 [INFO] ✅ Broadcast complete — 2 members ko bheja!
+2026-06-13 15:38:02,588 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-13 15:38:02,590 [INFO] Start polling
+2026-06-13 15:38:03,522 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-13 15:38:12,420 [INFO] 📩 Message aaya — VYOM: book
+2026-06-13 15:38:16,018 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-13 15:38:16,659 [INFO] 🧠 Thinking budget: 1024 — book
+2026-06-13 15:38:16,663 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:38:26,277 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:38:27,511 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:38:44,362 [INFO] 📩 Message aaya — VYOM: test
+2026-06-13 15:38:44,507 [INFO] 🧠 Thinking budget: 1024 — test
+2026-06-13 15:38:44,508 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:38:46,059 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:38:47,284 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:39:11,073 [INFO] Connecting...
+2026-06-13 15:39:11,176 [INFO] Connected! Production DC5 (media) - IPv4
+2026-06-13 15:39:11,179 [INFO] NetworkTask started
+2026-06-13 15:39:11,742 [INFO] Session initialized: Layer 158
+2026-06-13 15:39:11,743 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-13 15:39:11,743 [INFO] System: Windows 11 (en)
+2026-06-13 15:39:11,744 [INFO] Session started
+2026-06-13 15:39:11,751 [INFO] PingTask started
+2026-06-13 15:39:12,425 [INFO] PingTask stopped
+2026-06-13 15:39:12,427 [INFO] NetworkTask stopped
+2026-06-13 15:39:12,427 [INFO] Disconnected
+2026-06-13 15:39:12,428 [INFO] Session stopped
+2026-06-13 15:39:12,429 [INFO] 📩 Message aaya — VYOM: [Image]
+2026-06-13 15:39:12,564 [INFO] 🧠 Thinking budget: 8000 — Image
+2026-06-13 15:39:12,566 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:39:25,099 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:39:26,339 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:39:53,778 [INFO] 📩 Message aaya — VYOM: demotivated hu
+2026-06-13 15:39:53,940 [INFO] 🧠 Thinking budget: 4000 — demotivated hu
+2026-06-13 15:39:53,947 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:39:59,466 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:40:00,716 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:40:34,904 [INFO] 📩 Message aaya — VYOM: 6 months me jee me kitne number aaa skte hai
+2026-06-13 15:40:35,020 [INFO] 🧠 Thinking budget: 4000 — 6 months me jee me kitne numbe
+2026-06-13 15:40:35,022 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:40:40,250 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:40:41,675 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:41:08,679 [INFO] 📩 Message aaya — VYOM: book
+2026-06-13 15:41:08,967 [INFO] 🧠 Thinking budget: 1024 — book
+2026-06-13 15:41:08,969 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:41:11,692 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:41:12,908 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:41:19,403 [INFO] 📩 Message aaya — VYOM: course
+2026-06-13 15:41:19,522 [INFO] 🧠 Thinking budget: 1024 — course
+2026-06-13 15:41:19,525 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:41:21,149 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:41:22,296 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:41:33,992 [INFO] 📩 Message aaya — VYOM: course kb se start hoga
+2026-06-13 15:41:34,100 [INFO] 🧠 Thinking budget: 1024 — course kb se start hoga
+2026-06-13 15:41:34,102 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:41:37,429 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:41:38,621 [INFO] ✅ Reply bheja — VYOM
+2026-06-13 15:41:48,209 [INFO] 📩 Message aaya — VYOM: fees kitni hai
+2026-06-13 15:41:48,433 [INFO] 🧠 Thinking budget: 1024 — fees kitni hai
+2026-06-13 15:41:48,436 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-13 15:41:51,634 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-13 15:41:52,875 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:26:27,536 [INFO] Connecting...
+2026-06-14 08:26:27,720 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 08:26:27,725 [INFO] NetworkTask started
+2026-06-14 08:26:28,435 [INFO] Session initialized: Layer 158
+2026-06-14 08:26:28,437 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 08:26:28,438 [INFO] System: Windows 11 (en)
+2026-06-14 08:26:28,442 [INFO] Session started
+2026-06-14 08:26:28,456 [INFO] PingTask started
+2026-06-14 08:26:28,709 [INFO] Started 12 HandlerTasks
+2026-06-14 08:26:28,710 [INFO] ✅ Automation account connected!
+2026-06-14 08:26:28,712 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 08:26:28,713 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 08:26:28,714 [INFO] Start polling
+2026-06-14 08:26:29,500 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 08:26:29,710 [INFO] Update id=96037693 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 08:26:33,668 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 08:26:33,810 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 08:26:34,529 [ERROR] ❌ New member handler error: Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-14 08:26:34,531 [INFO] Update id=96037694 is handled. Duration 4819 ms by bot id=8727661182
+2026-06-14 08:26:34,637 [ERROR] ❌ New member handler error: Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-14 08:26:34,639 [INFO] Update id=96037692 is handled. Duration 4930 ms by bot id=8727661182
+2026-06-14 08:37:24,266 [INFO] Connecting...
+2026-06-14 08:37:24,467 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 08:37:24,493 [INFO] NetworkTask started
+2026-06-14 08:37:25,393 [INFO] Session initialized: Layer 158
+2026-06-14 08:37:25,394 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 08:37:25,395 [INFO] System: Windows 11 (en)
+2026-06-14 08:37:25,395 [INFO] Session started
+2026-06-14 08:37:25,403 [INFO] PingTask started
+2026-06-14 08:37:25,705 [INFO] Started 12 HandlerTasks
+2026-06-14 08:37:25,706 [INFO] ✅ Automation account connected!
+2026-06-14 08:37:25,708 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 08:37:25,709 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 08:37:25,710 [INFO] Start polling
+2026-06-14 08:37:26,623 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 08:37:55,911 [INFO] 📩 Message aaya — VYOM: hi sir
+2026-06-14 08:38:00,002 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 08:38:01,334 [INFO] 🧠 Thinking budget: 1024 — hi sir
+2026-06-14 08:38:01,341 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:38:15,361 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:38:17,000 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:39:09,653 [INFO] 📩 Message aaya — VYOM: course
+2026-06-14 08:39:09,841 [INFO] 🧠 Thinking budget: 1024 — course
+2026-06-14 08:39:09,844 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:39:12,502 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:39:14,243 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:39:24,340 [INFO] 📩 Message aaya — VYOM: 11
+2026-06-14 08:39:24,456 [INFO] 🧠 Thinking budget: 4000 — 11
+2026-06-14 08:39:24,458 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:39:31,651 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:39:33,597 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:39:50,805 [INFO] 📩 Message aaya — VYOM: only maths
+2026-06-14 08:39:51,397 [INFO] 🧠 Thinking budget: 4000 — only maths
+2026-06-14 08:39:51,399 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:39:54,182 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:39:55,646 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:40:29,554 [INFO] 📩 Message aaya — VYOM: physices ke dedo ab
+2026-06-14 08:40:29,715 [INFO] 🧠 Thinking budget: 4000 — physices ke dedo ab
+2026-06-14 08:40:29,718 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:40:34,320 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:40:35,652 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:40:52,566 [INFO] 📩 Message aaya — VYOM: recorded ni live hai kya koi
+2026-06-14 08:40:52,859 [INFO] 🧠 Thinking budget: 4000 — recorded ni live hai kya koi
+2026-06-14 08:40:52,861 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:40:59,306 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:41:00,638 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 08:44:08,093 [INFO] Connecting...
+2026-06-14 08:44:08,341 [INFO] Connected! Production DC5 (media) - IPv4
+2026-06-14 08:44:08,344 [INFO] NetworkTask started
+2026-06-14 08:44:09,276 [INFO] Session initialized: Layer 158
+2026-06-14 08:44:09,277 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 08:44:09,278 [INFO] System: Windows 11 (en)
+2026-06-14 08:44:09,278 [INFO] Session started
+2026-06-14 08:44:09,292 [INFO] PingTask started
+2026-06-14 08:44:09,656 [INFO] PingTask stopped
+2026-06-14 08:44:09,659 [INFO] NetworkTask stopped
+2026-06-14 08:44:09,660 [INFO] Disconnected
+2026-06-14 08:44:09,660 [INFO] Session stopped
+2026-06-14 08:44:09,662 [INFO] 📩 Message aaya — VYOM: [Image]
+2026-06-14 08:44:09,789 [INFO] 🧠 Thinking budget: 8000 — Image
+2026-06-14 08:44:09,809 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 08:44:23,191 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 08:44:26,054 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 10:20:30,115 [INFO] Connecting...
+2026-06-14 10:20:30,296 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:20:30,309 [INFO] NetworkTask started
+2026-06-14 10:20:30,948 [INFO] Session initialized: Layer 158
+2026-06-14 10:20:30,948 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:20:30,949 [INFO] System: Windows 11 (en)
+2026-06-14 10:20:30,949 [INFO] Session started
+2026-06-14 10:20:30,953 [INFO] PingTask started
+2026-06-14 10:20:31,358 [INFO] Started 12 HandlerTasks
+2026-06-14 10:20:31,358 [INFO] ✅ Automation account connected!
+2026-06-14 10:20:31,360 [INFO] 📢 Broadcast shuru ho raha hai...
+2026-06-14 10:20:33,164 [INFO] ✅ Bheja (1): VYOM
+2026-06-14 10:20:37,373 [INFO] ✅ Broadcast complete — 1 members ko bheja!
+2026-06-14 10:20:37,374 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:20:37,375 [INFO] Start polling
+2026-06-14 10:20:38,308 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:20:38,704 [INFO] Update id=96037696 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:20:38,705 [INFO] Update id=96037697 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:20:41,977 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:20:41,978 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:20:42,893 [WARNING] ⚠️ DM nahi ja saka Kevin (5919749196) — privacy on hai ya pehle contact nahi: Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-14 10:20:44,326 [INFO] ✅ New member sheet mein save — Kevin
+2026-06-14 10:20:44,327 [INFO] Update id=96037695 is handled. Duration 5623 ms by bot id=8727661182
+2026-06-14 10:20:44,575 [INFO] ✅ Welcome bheja — Vyom
+2026-06-14 10:20:45,863 [INFO] ✅ Existing user status updated — Vyom
+2026-06-14 10:20:45,864 [INFO] Update id=96037698 is handled. Duration 7158 ms by bot id=8727661182
+2026-06-14 10:23:00,427 [INFO] ✅ Welcome bheja — Vyom
+2026-06-14 10:23:01,608 [INFO] ✅ New member sheet mein save — Vyom
+2026-06-14 10:23:01,609 [INFO] Update id=96037699 is handled. Duration 3403 ms by bot id=8727661182
+2026-06-14 10:31:35,563 [INFO] Connecting...
+2026-06-14 10:31:35,702 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:31:35,706 [INFO] NetworkTask started
+2026-06-14 10:31:36,321 [INFO] Session initialized: Layer 158
+2026-06-14 10:31:36,322 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:31:36,322 [INFO] System: Windows 11 (en)
+2026-06-14 10:31:36,323 [INFO] Session started
+2026-06-14 10:31:36,327 [INFO] PingTask started
+2026-06-14 10:31:36,632 [INFO] Started 12 HandlerTasks
+2026-06-14 10:31:36,632 [INFO] ✅ Automation account connected!
+2026-06-14 10:31:36,633 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 10:31:36,634 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:31:36,635 [INFO] Start polling
+2026-06-14 10:31:37,648 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:31:38,066 [INFO] Update id=96037700 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:31:38,067 [INFO] Update id=96037701 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:32:02,018 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:32:04,066 [INFO] ✅ Welcome bheja — Vyom
+2026-06-14 10:32:05,364 [INFO] ✅ New member sheet mein save — Vyom
+2026-06-14 10:32:05,365 [INFO] Update id=96037702 is handled. Duration 5803 ms by bot id=8727661182
+2026-06-14 10:32:15,228 [INFO] 📩 Message aaya — VYOM: Course
+2026-06-14 10:32:16,356 [INFO] 🧠 Thinking budget: 1024 — Course
+2026-06-14 10:32:16,369 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 10:32:25,263 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 10:32:26,902 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 10:32:47,487 [INFO] ✅ Welcome bheja — Vyom
+2026-06-14 10:32:48,801 [INFO] ✅ New member sheet mein save — Vyom
+2026-06-14 10:32:48,802 [INFO] Update id=96037703 is handled. Duration 3455 ms by bot id=8727661182
+2026-06-14 10:34:33,699 [INFO] Connecting...
+2026-06-14 10:34:33,878 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:34:33,888 [INFO] NetworkTask started
+2026-06-14 10:34:34,607 [INFO] Session initialized: Layer 158
+2026-06-14 10:34:34,608 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:34:34,608 [INFO] System: Windows 11 (en)
+2026-06-14 10:34:34,609 [INFO] Session started
+2026-06-14 10:34:34,614 [INFO] PingTask started
+2026-06-14 10:34:35,014 [INFO] Started 12 HandlerTasks
+2026-06-14 10:34:35,014 [INFO] ✅ Automation account connected!
+2026-06-14 10:34:35,015 [INFO] 📢 Broadcast shuru ho raha hai...
+2026-06-14 10:34:36,748 [INFO] ✅ Bheja (1): Vyom
+2026-06-14 10:34:42,277 [INFO] ✅ Bheja (2): VYOM
+2026-06-14 10:34:46,479 [INFO] ✅ Broadcast complete — 2 members ko bheja!
+2026-06-14 10:34:46,480 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:34:46,481 [INFO] Start polling
+2026-06-14 10:34:47,504 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:35:28,280 [INFO] 📩 Message aaya — VYOM: Course kitne ka hai
+2026-06-14 10:35:31,735 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:35:32,761 [INFO] 📂 History restore ki — VYOM (1 msgs)
+2026-06-14 10:35:32,968 [INFO] 🧠 Thinking budget: 1024 — Course kitne ka hai
+2026-06-14 10:35:32,970 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 10:35:39,211 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 10:35:40,981 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 10:38:23,043 [INFO] Connecting...
+2026-06-14 10:38:23,155 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:38:23,160 [INFO] NetworkTask started
+2026-06-14 10:38:23,876 [INFO] Session initialized: Layer 158
+2026-06-14 10:38:23,877 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:38:23,878 [INFO] System: Windows 11 (en)
+2026-06-14 10:38:23,878 [INFO] Session started
+2026-06-14 10:38:23,884 [INFO] PingTask started
+2026-06-14 10:38:24,224 [INFO] Started 12 HandlerTasks
+2026-06-14 10:38:24,225 [INFO] ✅ Automation account connected!
+2026-06-14 10:38:24,225 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 10:38:24,226 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:38:24,227 [INFO] Start polling
+2026-06-14 10:38:25,309 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:39:25,900 [INFO] Connecting...
+2026-06-14 10:39:26,028 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:39:26,031 [INFO] NetworkTask started
+2026-06-14 10:39:26,958 [INFO] Session initialized: Layer 158
+2026-06-14 10:39:26,959 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:39:26,959 [INFO] System: Windows 11 (en)
+2026-06-14 10:39:26,960 [INFO] Session started
+2026-06-14 10:39:26,965 [INFO] PingTask started
+2026-06-14 10:39:27,473 [INFO] Started 12 HandlerTasks
+2026-06-14 10:39:27,474 [INFO] ✅ Automation account connected!
+2026-06-14 10:39:27,475 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 10:39:27,476 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:39:27,476 [INFO] Start polling
+2026-06-14 10:39:28,391 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:39:28,706 [INFO] Update id=96037704 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:39:38,525 [INFO] 📩 Message aaya — VYOM: Hi sir
+2026-06-14 10:39:41,800 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:39:42,824 [INFO] 🧠 Thinking budget: 1024 — Hi sir
+2026-06-14 10:39:42,826 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 10:39:48,770 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 10:39:50,505 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 10:40:04,742 [INFO] 📩 Message aaya — VYOM: Sir course kb se start hoge
+2026-06-14 10:40:04,942 [INFO] 🧠 Thinking budget: 1024 — Sir course kb se start hoge
+2026-06-14 10:40:04,943 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 10:40:08,732 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 10:40:10,474 [INFO] ✅ Reply bheja — VYOM
+2026-06-14 10:40:21,430 [INFO] ✅ Welcome bheja — Vyom
+2026-06-14 10:40:22,761 [INFO] ✅ Existing user status updated — Vyom
+2026-06-14 10:40:22,763 [INFO] Update id=96037705 is handled. Duration 3683 ms by bot id=8727661182
+2026-06-14 10:58:43,522 [INFO] Connecting...
+2026-06-14 10:58:43,676 [INFO] Connected! Production DC5 - IPv4
+2026-06-14 10:58:43,686 [INFO] NetworkTask started
+2026-06-14 10:58:44,396 [INFO] Session initialized: Layer 158
+2026-06-14 10:58:44,396 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-14 10:58:44,397 [INFO] System: Windows 11 (en)
+2026-06-14 10:58:44,397 [INFO] Session started
+2026-06-14 10:58:44,400 [INFO] PingTask started
+2026-06-14 10:58:44,735 [INFO] Started 12 HandlerTasks
+2026-06-14 10:58:44,735 [INFO] ✅ Automation account connected!
+2026-06-14 10:58:44,737 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-14 10:58:44,738 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-14 10:58:44,739 [INFO] Start polling
+2026-06-14 10:58:44,740 [INFO] ✅ Welcome queue worker shuru hua
+2026-06-14 10:58:45,599 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-14 10:58:45,941 [INFO] Update id=96037706 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:58:45,942 [INFO] Update id=96037707 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-14 10:59:01,800 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-14 10:59:02,517 [INFO] 📥 Join event queue mein — Vyom (queue size: 1)
+2026-06-14 10:59:02,517 [INFO] Update id=96037708 is handled. Duration 3479 ms by bot id=8727661182
+2026-06-14 10:59:04,053 [INFO] ✅ Welcome bheja (queue) — Vyom
+2026-06-14 10:59:21,464 [INFO] 📩 Message aaya — VYOM: Book
+2026-06-14 10:59:22,692 [INFO] 🧠 Thinking budget: 1024 — Book
+2026-06-14 10:59:22,693 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-14 10:59:28,119 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-14 10:59:29,658 [INFO] ✅ Reply bheja — VYOM
+2026-06-15 01:50:52,759 [INFO] Start creating a new auth key on DC2
+2026-06-15 01:50:52,760 [INFO] Connecting...
+2026-06-15 01:50:53,131 [INFO] Connected! Production DC2 - IPv4
+2026-06-15 01:50:55,833 [INFO] Done auth key exchange: DhGenOk
+2026-06-15 01:50:55,834 [INFO] Disconnected
+2026-06-15 01:50:55,849 [INFO] Connecting...
+2026-06-15 01:50:56,206 [INFO] Connected! Production DC2 - IPv4
+2026-06-15 01:50:56,210 [INFO] NetworkTask started
+2026-06-15 01:50:57,773 [INFO] Session initialized: Layer 158
+2026-06-15 01:50:57,774 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-15 01:50:57,774 [INFO] System: Windows 11 (en)
+2026-06-15 01:50:57,774 [INFO] Session started
+2026-06-15 01:50:57,779 [INFO] PingTask started
+2026-06-15 01:50:58,138 [INFO] PingTask stopped
+2026-06-15 01:50:58,139 [INFO] NetworkTask stopped
+2026-06-15 01:50:58,139 [INFO] Disconnected
+2026-06-15 01:50:58,140 [INFO] Session stopped
+2026-06-15 01:50:58,155 [INFO] Start creating a new auth key on DC5
+2026-06-15 01:50:58,155 [INFO] Connecting...
+2026-06-15 01:50:58,457 [INFO] Connected! Production DC5 - IPv4
+2026-06-15 01:51:00,746 [INFO] Done auth key exchange: DhGenOk
+2026-06-15 01:51:00,747 [INFO] Disconnected
+2026-06-15 01:51:00,756 [INFO] Connecting...
+2026-06-15 01:51:01,028 [INFO] Connected! Production DC5 - IPv4
+2026-06-15 01:51:01,030 [INFO] NetworkTask started
+2026-06-15 01:51:02,045 [INFO] Session initialized: Layer 158
+2026-06-15 01:51:02,045 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-15 01:51:02,046 [INFO] System: Windows 11 (en)
+2026-06-15 01:51:02,046 [INFO] Session started
+2026-06-15 01:51:02,047 [INFO] PingTask started
+2026-06-15 01:51:35,760 [INFO] Started 12 HandlerTasks
+2026-06-15 01:51:35,761 [INFO] ✅ Automation account connected!
+2026-06-15 01:51:35,765 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-15 01:51:35,765 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-15 01:51:35,766 [INFO] Start polling
+2026-06-15 01:51:35,767 [INFO] ✅ Welcome queue worker shuru hua
+2026-06-15 01:51:37,281 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-15 01:51:37,695 [ERROR] ❌ Sheets is_existing_user error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:37,696 [ERROR] ❌ Sheets is_existing_user error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:37,697 [ERROR] ❌ Sheets is_existing_user error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:37,698 [INFO] Update id=96037712 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-15 01:51:37,699 [INFO] Update id=96037713 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-15 01:51:37,700 [INFO] Update id=96037716 is not handled. Duration 0 ms by bot id=8727661182
+2026-06-15 01:51:37,701 [ERROR] ❌ Sheets is_existing_user error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:37,701 [ERROR] ❌ Sheets is_existing_user error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:37,702 [INFO] 📥 Join event queue mein — 7906498597 (queue size: 1)
+2026-06-15 01:51:37,702 [INFO] Update id=96037709 is handled. Duration 10 ms by bot id=8727661182
+2026-06-15 01:51:37,703 [INFO] 📥 Join event queue mein — Abhinaw (queue size: 2)
+2026-06-15 01:51:37,703 [INFO] Update id=96037710 is handled. Duration 9 ms by bot id=8727661182
+2026-06-15 01:51:37,704 [INFO] 📥 Join event queue mein — AC (queue size: 3)
+2026-06-15 01:51:37,706 [INFO] Update id=96037711 is handled. Duration 9 ms by bot id=8727661182
+2026-06-15 01:51:37,706 [INFO] 📥 Join event queue mein — Dhruv (queue size: 4)
+2026-06-15 01:51:37,707 [INFO] Update id=96037714 is handled. Duration 7 ms by bot id=8727661182
+2026-06-15 01:51:37,780 [INFO] 📥 Join event queue mein — Ankit (queue size: 4)
+2026-06-15 01:51:37,780 [INFO] Update id=96037715 is handled. Duration 80 ms by bot id=8727661182
+2026-06-15 01:51:37,986 [WARNING] ⚠️ DM nahi ja saka 7906498597 (8707967196): Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-15 01:51:37,986 [ERROR] ❌ Sheets save error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:44,435 [WARNING] ⚠️ DM nahi ja saka Abhinaw (5440612554): Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-15 01:51:44,436 [ERROR] ❌ Sheets save error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:50,683 [WARNING] ⚠️ DM nahi ja saka AC (1548326998): Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-15 01:51:50,684 [ERROR] ❌ Sheets save error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:51:57,031 [WARNING] ⚠️ DM nahi ja saka Dhruv (7667052101): Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-15 01:51:57,032 [ERROR] ❌ Sheets save error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:52:03,275 [WARNING] ⚠️ DM nahi ja saka Ankit (1345977991): Telegram says: [400 PEER_ID_INVALID] - The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it 
+2026-06-15 01:52:03,276 [ERROR] ❌ Sheets save error: [Errno 2] No such file or directory: '/root/upliftjee/google_creds.json'
+2026-06-15 01:52:41,858 [INFO] Connecting...
+2026-06-15 01:52:42,199 [INFO] Connected! Production DC5 - IPv4
+2026-06-15 01:52:42,203 [INFO] NetworkTask started
+2026-06-15 01:52:43,280 [INFO] Session initialized: Layer 158
+2026-06-15 01:52:43,280 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-15 01:52:43,280 [INFO] System: Windows 11 (en)
+2026-06-15 01:52:43,281 [INFO] Session started
+2026-06-15 01:52:43,284 [INFO] PingTask started
+2026-06-15 01:52:43,834 [INFO] Started 12 HandlerTasks
+2026-06-15 01:52:43,835 [INFO] ✅ Automation account connected!
+2026-06-15 01:52:43,836 [INFO] ⏭️ Broadcast already done — skip kar raha hoon
+2026-06-15 01:52:43,837 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-15 01:52:43,838 [INFO] Start polling
+2026-06-15 01:52:43,838 [INFO] ✅ Welcome queue worker shuru hua
+2026-06-15 01:52:45,059 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-15 01:53:08,923 [INFO] 📩 Message aaya — VYOM: Hi sir
+2026-06-15 01:53:13,423 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-15 01:53:15,163 [INFO] 🧠 Thinking budget: 1024 — Hi sir
+2026-06-15 01:53:15,176 [INFO] AFC is enabled with max remote calls: 10.
+2026-06-15 01:53:26,713 [INFO] HTTP Request: POST https://us-central1-aiplatform.googleapis.com/v1beta1/projects/upliftjee/locations/us-central1/publishers/google/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-06-15 01:53:28,170 [INFO] ✅ Reply bheja — VYOM
+2026-06-15 01:54:28,488 [INFO] 📥 Join event queue mein — Vyom (queue size: 1)
+2026-06-15 01:54:28,489 [INFO] Update id=96037717 is handled. Duration 718 ms by bot id=8727661182
+2026-06-15 01:54:30,430 [INFO] ✅ Welcome bheja (queue) — Vyom
+2026-06-15 01:56:10,971 [INFO] Connecting...
+2026-06-15 01:56:11,189 [INFO] Connected! Production DC5 - IPv4
+2026-06-15 01:56:11,192 [INFO] NetworkTask started
+2026-06-15 01:56:12,219 [INFO] Session initialized: Layer 158
+2026-06-15 01:56:12,220 [INFO] Device: CPython 3.13.13 - Pyrogram 2.0.106
+2026-06-15 01:56:12,220 [INFO] System: Windows 11 (en)
+2026-06-15 01:56:12,221 [INFO] Session started
+2026-06-15 01:56:12,228 [INFO] PingTask started
+2026-06-15 01:56:13,141 [INFO] Started 12 HandlerTasks
+2026-06-15 01:56:13,142 [INFO] ✅ Automation account connected!
+2026-06-15 01:56:13,143 [INFO] 📢 Broadcast shuru ho raha hai — queue mein daal raha hoon...
+2026-06-15 01:56:13,145 [INFO] ✅ Welcome queue worker shuru hua
+2026-06-15 01:56:13,856 [INFO] ✅ 2 members queue mein daale — worker bhejta rahega
+2026-06-15 01:56:13,856 [INFO] ✅ Bot started — join events sun raha hai!
+2026-06-15 01:56:13,857 [INFO] Start polling
+2026-06-15 01:56:15,287 [INFO] Run polling for bot @UPLIFT_JEE_Query_Bot id=8727661182 - 'UPLIFE JEE Query'
+2026-06-15 01:56:15,518 [INFO] ✅ Welcome bheja (queue) — VYOM
+2026-06-15 01:56:19,382 [INFO] ✅ Google Sheets — naya connection bana
+2026-06-15 01:56:27,810 [INFO] ✅ Welcome bheja (queue) — Vyom
